@@ -4,19 +4,14 @@
       </head>
       <body>
           <div>
-              <h1><a href="/">Django blog<a/></h1>
+              <h1>Sitio de Pruebas</h1>
           </div>
+      {%for post in posts%}
           <div>
-              <p>published: 16.01.2020, 22:24</p>
-              <h2><a href="">Mi primer publicación</a></h2>
-              <p>fjdkhfkjdhiudahidahfldlhfdkjsahfkadjhfklads
-              fjdksahfksjahfkjahfkajhdfksjahfkdasj</p>
+              <h2>{{post.title}} published:{{post.published_date}}</h2>
+              <p>{{post.text|linebreaksbr}}</p>
           </div>
-          <div>
-              <p>published: 16.01.2020, 22:24</p>
-              <h2><a href="">Mi primer publicación</a></h2>
-              <p>poripoiespoiferpofopceaioprfaepo</p>
-          </div>
+      {%endfor%}
       </body>
 
 </html>
